@@ -15,17 +15,23 @@ body {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 32px;
 }
 
 article {
-    width: 311px;
-    height:222px;
-    background-color: #ffffff;
-    border-radius: 0 0 8px 8px;
+  width: 311px;
+  height: 222px;
+  background-color: #ffffff;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 27px;
+  margin-bottom: 25px;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
 }
 
 h1 {
@@ -62,6 +68,13 @@ p {
   opacity: 0.5;
 }
 
+img {
+  width: 57px;
+  height: 57px;
+  align-self: flex-end;
+  margin-top: 33px;
+}
+
 main > p {
   font-size: 15px;
   line-height: 25px;
@@ -70,27 +83,82 @@ main > p {
   color: #4d4f62;
   mix-blend-mode: normal;
   opacity: 0.5;
+  width: 311px;
+  margin: 16px 0 76px 0;
 }
 
 .cardborder {
-    width:311px;
-    height:4px;
-    box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
-    border-radius: 8px 8px 0 0 ;
+  width: 311px;
+  height: 4px;
+  border-radius: 8px 8px 0 0;
 }
 
-main > .cardborder:first-of-type {
-    background-color: #44D3D2;
+.lightblue {
+  background-color: #44d3d2;
 }
 
-div > .cardborder:first-of-type {
-    background-color: #EA5454;
+.red {
+  background-color: #ea5454;
 }
 
-div > .cardborder:nth-of-type(2) {
-    background-color: #FCAE4A;
+.yellow {
+  background-color: #fcae4a;
 }
 
-main > .cardborder:last-of-type {
-    background-color: #549EF2;;
+.darkblue {
+  background-color: #549ef2;
+}
+
+@media (min-width: 1000px) {
+  main {
+    padding: 80px 165px;
+  }
+  
+  section {
+    display: flex;
+    gap: 30px;
+  }
+
+  article {
+    width: 350px;
+    height: 250px;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.25px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.25px;
+  }
+
+  img {
+    width:64px;
+    height:64px;
+  }
+
+  main > p {
+    width: 540px;
+  }
+
+  section > div:first-of-type,
+  section > div:last-of-type {
+    align-self: center;
+    width: 350px;
+    height: 250px;
+  }
+
+  section > div > div {
+    width: 350px;
+    height: 250px;
+  }
+
+  .cardborder {
+    width: 350px;
+  }
 }
